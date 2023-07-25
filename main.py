@@ -21,12 +21,12 @@ api.token = misskey_token
 
 match random.randint(1, 4):
     case 1:
-        post_text = "前回の答えは\"𝕏 = "+ answer +"\" でした！　では次の問題です\n\n𝕏にあてはまる数字を求めよ\n"+str(x) + " × 𝕏 = " + str(x * y)+"\n\n回答は約1時間後に次の問題と一緒に開示されます"
+        post_text = "前回の答えは\":unicode_1d54f_bg_black: = "+ answer +"\" でした！　では次の問題です\n\n:unicode_1d54f_bg_black:にあてはまる数字を求めよ\n"+str(x) + " × :unicode_1d54f_bg_black: = " + str(x * y)+"\n\n回答は約1時間後に次の問題と一緒に開示されます"
         print(post_text)
         api.notes_create(text=post_text)
        
     case 2:
-        post_text = "前回の答えは\"𝕏 = "+ answer +"\" でした！　では次の問題です\n\n𝕏にあてはまる数字を求めよ\n"+str(x) + " + 𝕏 = " + str(x + y)+"\n\n回答は約1時間後に次の問題と一緒に開示されます"
+        post_text = "前回の答えは\":unicode_1d54f_bg_black: = "+ answer +"\" でした！　では次の問題です\n\n:unicode_1d54f_bg_black:にあてはまる数字を求めよ\n"+str(x) + " + :unicode_1d54f_bg_black: = " + str(x + y)+"\n\n回答は約1時間後に次の問題と一緒に開示されます"
         print(post_text)
         api.notes_create(text=post_text)
 
