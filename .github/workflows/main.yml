@@ -32,7 +32,7 @@ jobs:
           if ! git diff --exit-code --quiet
           then
            git add --update
-            git config --global user.name ${{ secrets.YOUSER_NAME }}
+            git config --global user.name ${{ secrets.USER_NAME }}
             git config --global user.email ${{ secrets.MAIL_ADDRESS }}
             git commit -m "Update the last update date and time"
             git push
