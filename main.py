@@ -41,4 +41,4 @@ match random.randint(1, 4):
         print(post_text)
         api.notes_create(text=post_text)
 
-print(":unicode_1d54f_bg_black: = "+str(y))
+print("X = "+str(y))
