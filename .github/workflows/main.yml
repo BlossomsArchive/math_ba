@@ -25,7 +25,7 @@ jobs:
           MISSKEY_TOKEN: ${{ secrets.MISSKEY_TOKEN }}
         run: |
           python main.py
-          cat answer.txt
+          cat question.txt
 
       - name: Update question.txt
         run: |
