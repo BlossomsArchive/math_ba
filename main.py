@@ -1,5 +1,6 @@
 import random
 from misskey import Misskey
+from atproto import Client, models
 import os
 
 f = open("question.txt", "r", encoding='utf-8')
@@ -16,6 +17,10 @@ misskey_token = os.environ.get("MISSKEY_TOKEN")
 api = Misskey(misskey_address)
 api.token = misskey_token
 
+# Bluesky
+bluesky = Client()
+bluesky.login(str(os.environ.get("BLUESKY_MAIL_ADDRESS")),str(os.environ.get("BLUESKY_PASSWORD")))
+
 match random.randint(1, 4):
         case 1:
             post_text = "前回の答えは\":unicode_1d54f_bg_black: = "+ old[1] +"\" でした！　では次の問題です\n\n:unicode_1d54f_bg_black:にあてはまる数字を求めよ\n"+str(x) + " × :unicode_1d54f_bg_black: = " + str(x * y)+"\n\n回答は約1時間後に次の問題と一緒に開示されます"
@@ -24,7 +29,9 @@ match random.randint(1, 4):
             h.close()
             print(post_text)
             api.notes_create(text=post_text)
-        
+            bluesky.send_post(post_text)
+
+
         case 2:
             post_text = "前回の答えは\":unicode_1d54f_bg_black: = "+ old[1] +"\" でした！　では次の問題です\n\n:unicode_1d54f_bg_black:にあてはまる数字を求めよ\n"+str(x) + " + :unicode_1d54f_bg_black: = " + str(x + y)+"\n\n回答は約1時間後に次の問題と一緒に開示されます"
             h = open("question.txt", "w", encoding='utf-8')
@@ -32,6 +39,7 @@ match random.randint(1, 4):
             h.close()
             print(post_text)
             api.notes_create(text=post_text)
+            bluesky.send_post(post_text)
 
         case 3:
             post_text = "前回の答えは\":unicode_1d54f_bg_black: = "+ old[1] +"\" でした!　では次の問題です\n\n:unicode_1d54f_bg_black:にあてはまる数字を求めよ\n"+str(x) + " - :unicode_1d54f_bg_black: = " + str(x - y) +"\n\n回答は約1時間後に次の問題と一緒に開示されます"
@@ -40,7 +48,7 @@ match random.randint(1, 4):
             h.close()
             print(post_text)
             api.notes_create(text=post_text)
-
+            bluesky.send_post(post_text)
 
         case 4:
             post_text = "前回の答えは\":unicode_1d54f_bg_black: = "+ old[1] +"\" でした！　では次の問題です\n\n:unicode_1d54f_bg_black:にあてはまる数字を求めよ\n"+str(x) + " ÷ :unicode_1d54f_bg_black: = " + str(x / y)+"\n\n回答は約1時間後に次の問題と一緒に開示されます"
@@ -49,6 +57,8 @@ match random.randint(1, 4):
             h.close()
             print(post_text)
             api.notes_create(text=post_text)
+            bluesky.send_post(post_text)
+
 
 print("--書き込み--")
 print("X = "+str(x))
