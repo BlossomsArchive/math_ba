@@ -14,8 +14,7 @@ y = random.randint(1, 9999)
 # Misskey
 misskey_address = os.environ.get("MISSKEY_SERVER_ADDRESS")
 misskey_token = os.environ.get("MISSKEY_TOKEN")
-api = Misskey(misskey_address)
-api.token = misskey_token
+api = Misskey(misskey_address,misskey_token)
 
 # Bluesky
 bluesky = Client()
