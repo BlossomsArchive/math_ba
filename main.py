@@ -34,7 +34,7 @@ match random.randint(1, 4):
 
         case 2:
             post_text = "前回の答えは\":unicode_1d54f_bg_black: = "+ old[1] +"\" でした！　では次の問題です\n\n:unicode_1d54f_bg_black:にあてはまる数字を求めよ\n"+str(x) + " + :unicode_1d54f_bg_black: = " + str(x + y)+"\n\n回答は約1時間後に次の問題と一緒に開示されます"
-            post_text = "前回の答えは\"𝕏 = "+ old[1] +"\" でした！　では次の問題です\n\n𝕏にあてはまる数字を求めよ\n"+str(x) + " + 𝕏 = " + str(x + y)+"\n\n回答は約1時間後に次の問題と一緒に開示されます"
+            post_text_bs = "前回の答えは\"𝕏 = "+ old[1] +"\" でした！　では次の問題です\n\n𝕏にあてはまる数字を求めよ\n"+str(x) + " + 𝕏 = " + str(x + y)+"\n\n回答は約1時間後に次の問題と一緒に開示されます"
             h = open("question.txt", "w", encoding='utf-8')
             h.write(str(x)+"\n"+str(y)+'\n'+'+'+'\n'+str(x + y)+"\n"+old[1])
             h.close()
@@ -44,7 +44,7 @@ match random.randint(1, 4):
 
         case 3:
             post_text = "前回の答えは\":unicode_1d54f_bg_black: = "+ old[1] +"\" でした!　では次の問題です\n\n:unicode_1d54f_bg_black:にあてはまる数字を求めよ\n"+str(x) + " - :unicode_1d54f_bg_black: = " + str(x - y) +"\n\n回答は約1時間後に次の問題と一緒に開示されます"
-            post_text = "前回の答えは\"𝕏 = "+ old[1] +"\" でした!　では次の問題です\n\n𝕏にあてはまる数字を求めよ\n"+str(x) + " - 𝕏 = " + str(x - y) +"\n\n回答は約1時間後に次の問題と一緒に開示されます"
+            post_text_bs = "前回の答えは\"𝕏 = "+ old[1] +"\" でした!　では次の問題です\n\n𝕏にあてはまる数字を求めよ\n"+str(x) + " - 𝕏 = " + str(x - y) +"\n\n回答は約1時間後に次の問題と一緒に開示されます"
             h = open("question.txt", "w", encoding='utf-8')
             h.write(str(x)+"\n"+str(y)+'\n'+'-'+'\n'+str(x - y)+"\n"+old[1])
             h.close()
@@ -54,7 +54,7 @@ match random.randint(1, 4):
 
         case 4:
             post_text = "前回の答えは\":unicode_1d54f_bg_black: = "+ old[1] +"\" でした！　では次の問題です\n\n:unicode_1d54f_bg_black:にあてはまる数字を求めよ\n"+str(x) + " ÷ :unicode_1d54f_bg_black: = " + str(x / y)+"\n\n回答は約1時間後に次の問題と一緒に開示されます"
-            post_text = "前回の答えは\"𝕏 = "+ old[1] +"\" でした！　では次の問題です\n\n𝕏にあてはまる数字を求めよ\n"+str(x) + " ÷ 𝕏 = " + str(x / y)+"\n\n回答は約1時間後に次の問題と一緒に開示されます"
+            post_text_bs = "前回の答えは\"𝕏 = "+ old[1] +"\" でした！　では次の問題です\n\n𝕏にあてはまる数字を求めよ\n"+str(x) + " ÷ 𝕏 = " + str(x / y)+"\n\n回答は約1時間後に次の問題と一緒に開示されます"
             h = open("question.txt", "w", encoding='utf-8')
             h.write(str(x)+"\n"+str(y)+'\n'+'÷'+'\n'+str(x / y)+"\n"+old[1])
             h.close()
